@@ -7,6 +7,7 @@ var compression = require("compression");
 var cors = require("cors");
 
 var indexRouter = require("../routes/index.server.routes");
+var appointmentRouter = require("../routes/appointment.server.routes");
 
 var app = express();
 
@@ -31,6 +32,7 @@ app.use(cors());
 
 //routers
 app.use("/", indexRouter);
+app.use("/appointment", appointmentRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

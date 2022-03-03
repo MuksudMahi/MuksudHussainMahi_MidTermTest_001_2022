@@ -12,5 +12,8 @@ module.exports = function () {
       console.log("Error");
     });
 
+  //Loading appointment model
+  require("../models/appointment.server.models");
+
   return db;
 };
