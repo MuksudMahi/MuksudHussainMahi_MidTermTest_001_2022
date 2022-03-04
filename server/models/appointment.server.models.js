@@ -5,6 +5,8 @@ const Appointment = new Schema(
   {
     cardNumber: {
       type: String,
+      unique: true,
+      trim: true,
       required: "Card number is required",
     },
     vaccineSite: {

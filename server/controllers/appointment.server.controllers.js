@@ -18,7 +18,12 @@ module.exports.addAppointment = (req, res, next) => {
         message: "Appointment created",
       })
     )
-    .catch((err) => res.status(400).json({ message: err.message }));
+    .catch((err) =>
+      res.status(400).json({
+        success: false,
+        message: "Appointment not created check your inputs",
+      })
+    );
 };
 
 //get all appointmnets
@@ -31,7 +36,7 @@ module.exports.getAppointments = (req, res, next) => {
         res.status(200).json({ success: true, appointements: result });
       }
     })
-    .catch((err) => res.status(400).json({ message: err.message }));
+    .catch((err) => res.status(400).json({ message: err }));
 };
 
 //delete an appontment
