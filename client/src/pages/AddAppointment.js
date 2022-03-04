@@ -55,6 +55,7 @@ function AddAppointment(props) {
           <Form.Control
             type="text"
             onChange={(event) => setCardNumber(event.target.value)}
+            placeholder="Ex: 123456"
             required={true}
           />
         </Form.Group>
@@ -64,6 +65,7 @@ function AddAppointment(props) {
           <Form.Control
             type="text"
             onChange={(event) => setVaccineSite(event.target.value)}
+            placeholder="Ex: Toronto"
             required={true}
           />
         </Form.Group>
@@ -73,6 +75,7 @@ function AddAppointment(props) {
           <Form.Control
             type="text"
             onChange={(event) => setPriorityArea(event.target.value)}
+            placeholder="80+, healthcare, essential"
             required={true}
           />
         </Form.Group>
@@ -82,6 +85,7 @@ function AddAppointment(props) {
           <Form.Control
             type="date"
             onChange={(event) => setDateTime(event.target.value)}
+            placeholder="Vaccine Date"
             required={true}
           />
         </Form.Group>
@@ -91,6 +95,7 @@ function AddAppointment(props) {
           <Form.Control
             type="text"
             onChange={(event) => setCancelled(event.target.value)}
+            placeholder="true/false"
             required={true}
           />
         </Form.Group>
